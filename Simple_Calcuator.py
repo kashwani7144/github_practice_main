@@ -1,4 +1,5 @@
 
+import sys
 # Simple Calculator
 
 num1 = float(input("Enter first number: "))
@@ -23,15 +24,18 @@ elif operator == "%":
         result = num1 % num2
         print(f"Remainder of {num1} and {num2} is : {result}")
     else:
-        result = "Error! Modulus by zero is not allowed."
+        print("Error! Modulus by zero is not allowed.")
+        sys.exit(0)
 
 elif operator == "/":
     if num2 != 0:
         result = num1 / num2
         print(f"Quotient of {num1} and {num2} is : {result}")
     else:
-        result = "Error! Division by zero is not allowed."
+        print("Error! Division by zero is not allowed.")
+        sys.exit(0)
 
 else:
-    result = "Invalid operator!"
+    print("Invalid operator!")
+    sys.exit(0)
     
