@@ -5,7 +5,7 @@ import sys
 num1 = float(input("Enter first number: "))
 num2 = float(input("Enter second number: "))
 print("Which Mathematical Operation do you want ?\n")
-operator = input("Enter operator (+, -, *, /, %): ")
+operator = input("Enter operator (+, -, *, /, %, **, sqrt): ")
 
 if operator == "+":
     result = num1 + num2
@@ -33,6 +33,20 @@ elif operator == "/":
         print(f"Quotient of {num1} and {num2} is : {result}")
     else:
         print("Error! Division by zero is not allowed.")
+        sys.exit(0)
+
+# Power operation (**)
+elif operator == "**":
+    result = num1 ** num2
+    print(f"Power of {num1} raised to {num2} is: {result}")
+
+# Square root operation (sqrt)
+elif operator == "sqrt":
+    if num1 >= 0:
+        result = num1 ** 0.5
+        print(f"Square root of {num1} is: {result}")
+    else:
+        print("Error! Square root of a negative number is not allowed.")
         sys.exit(0)
 
 else:
